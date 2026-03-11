@@ -102,7 +102,7 @@ resource "azurerm_virtual_machine" "custom_vm" {
       disable_password_authentication = var.disable_password_authentication
       ssh_keys {
         path     = "/home/${var.admin_username}/.ssh/authorized_keys"
-        key_data = var.admin_ssh_key_data 
+        key_data = var.admin_ssh_key_data
       }
     }
   }
@@ -151,7 +151,7 @@ resource "azurerm_virtual_machine" "custom_vm" {
     for_each = var.enable_boot_diagnostics ? [1] : []
     content {
       enabled     = true
-      storage_uri = data.azurerm_storage_account.storeacc.0.primary_blob_endpoint 
+      storage_uri = data.azurerm_storage_account.storeacc.0.primary_blob_endpoint
     }
   }
 

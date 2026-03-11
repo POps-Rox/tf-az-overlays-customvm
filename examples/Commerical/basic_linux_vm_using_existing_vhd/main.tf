@@ -67,7 +67,7 @@ module "mod_virtual_machine" {
   # To use a custom storage account, supply a valid name for'storage_account_name'. 
   # Passing a 'null' value will use a Managed Storage Account to store Boot Diagnostics.
   enable_boot_diagnostics = true
-  storage_account_name = azurerm_storage_account.boot_diagnostics_storage_acct.name
+  storage_account_name    = azurerm_storage_account.boot_diagnostics_storage_acct.name
 
   # AAD Login is used to login to the VM using Azure Active Directory credentials.
   /* aad_login_enabled = true

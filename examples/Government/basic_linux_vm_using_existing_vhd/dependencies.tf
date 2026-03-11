@@ -156,12 +156,12 @@ resource "azurerm_windows_virtual_machine" "jumpbox" {
     azurerm_network_security_group.linux-nsg,
     azurerm_log_analytics_workspace.linux-log
   ]
-  name                = "jumpbox"
-  resource_group_name = azurerm_resource_group.custom-vm-rg.name
-  location            = var.location
-  size                = "Standard_B2s"
-  admin_username      = "azureadmin"
-  admin_password      = "P@$$w0rd1234!"
+  name                  = "jumpbox"
+  resource_group_name   = azurerm_resource_group.custom-vm-rg.name
+  location              = var.location
+  size                  = "Standard_B2s"
+  admin_username        = "azureadmin"
+  admin_password        = "P@$$w0rd1234!"
   network_interface_ids = [azurerm_network_interface.jumpbox-nic.id]
   os_disk {
     caching              = "ReadWrite"

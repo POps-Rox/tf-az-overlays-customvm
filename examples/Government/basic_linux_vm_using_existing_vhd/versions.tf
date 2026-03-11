@@ -3,7 +3,7 @@
 
 # Azurerm provider configuration
 provider "azurerm" {
-  environment = "usgovernment"
+  environment                = "usgovernment"
   skip_provider_registration = true
   features {}
 }
