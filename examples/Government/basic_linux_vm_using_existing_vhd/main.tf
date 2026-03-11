@@ -4,7 +4,7 @@
 # Terraform module for deploying a Custom VHD-based Virtual Machine in Azure. 
 
 module "mod_virtual_machine" {
-  #source  = "azurenoops/overlays-custom-virtual-machine/azurerm"
+  #source  = "github.com/POps-Rox/tf-az-overlays-customvm"
   #version = "~>0.9"
   source = "../../.."
 
