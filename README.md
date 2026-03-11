@@ -71,7 +71,7 @@ provider "azurerm" {
 # Terraform module for deploying a Custom VHD-based Virtual Machine in Azure. 
 
 module "mod_virtual_machine" {
-  source  = "azurenoops/overlays-custom-virtual-machine/azurerm"
+  source  = "POps-Rox/tf-az-overlays-custom-virtual-machine/azurerm"
   version = "~>0.9"
 
   # Resource Group, location, VNet and Subnet details
@@ -178,7 +178,7 @@ By default, network security groups are attached to Network Interface and allow 
 
 ```terraform
 module "virtual-machine" {
-  source  = "azurenoops/overlays-virtual-machine/azurerm"
+  source  = "POps-Rox/tf-az-overlays-virtual-machine/azurerm"
   version = "x.x.x"
 
 # .... omitted
@@ -236,7 +236,7 @@ data "azurerm_network_security_group" "example" {
 }
 
 module "virtual-machine" {
-   source  = "azurenoops/overlays-virtual-machine/azurerm"
+   source  = "POps-Rox/tf-az-overlays-virtual-machine/azurerm"
   version = "x.x.x"
 
 # .... omitted 
@@ -277,7 +277,7 @@ data "azurerm_network_security_group" "example" {
 }
 
 module "virtual-machine" {
-   source  = "azurenoops/overlays-virtual-machine/azurerm"
+   source  = "POps-Rox/tf-az-overlays-virtual-machine/azurerm"
   version = "x.x.x"
 
 # .... omitted 
